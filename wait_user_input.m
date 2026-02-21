@@ -1,7 +1,7 @@
 
 function status = wait_user_input(MSG, NoThrow)
     arguments
-        MSG string
+        MSG string = ""
         NoThrow string {mustBeMember(NoThrow, ...
             ["NoThrow", "Produce_Error"])} = "Produce_Error";
     end
