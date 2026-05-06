@@ -25,10 +25,10 @@ end
     
     
     if Two_prefix
-    Str = [num2str(Value) ' ' Unit_pref_V SI_unit ' (± ' num2str(Err) ...
-        ' ' Unit_pref_E SI_unit ')'];
+        Str = [num2str(Value) ' [' Unit_pref_V SI_unit '] (± ' num2str(Err) ...
+            ' [' Unit_pref_E SI_unit '])'];
     else
-        Str = ['(' num2str(Value) ' ± ' num2str(Err) ') ' Unit_pref_V SI_unit];
+        Str = ['(' num2str(Value) ' ± ' num2str(Err) ') [' Unit_pref_V SI_unit ']'];
     end
 end
 
