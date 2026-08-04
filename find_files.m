@@ -37,15 +37,14 @@ content(1:2) = [];
 names = string(content);
 
 if extension ~= "" && extension ~= '*'
-    is_mat = strfind(names, ['.' char(extension)]);
-    if class(is_mat) ~= "cell" % NOTE: case of single file in folder
-        is_mat = {is_mat};
+    ext_inds = strfind(names, ['.' char(extension)]);
+    if class(ext_inds) ~= "cell" % NOTE: case of single file in folder
+        ext_inds = {ext_inds};
     end
-    is_mat = ~cellfun(@isempty, is_mat);
-    names = names(is_mat);
+    ext_inds = ~cellfun(@isempty, ext_inds);
+    names = names(ext_inds);
 end
 
-numel(names)
 
 range = false(size(names));
 names_out = struct('full_path', [], 'filename', []);
