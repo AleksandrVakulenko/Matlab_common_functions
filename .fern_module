@@ -1,7 +1,6 @@
-name:
-Common
-
-dependencies:
-
-
-info:
+{
+  "name": "Common",
+  "dependecies": [],
+  "info": "Common functions for Matlab",
+  "Tegs": "files; path; figure; math"
+}
